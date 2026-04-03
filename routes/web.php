@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Course;
 
 Route::get('/', function () {
     return view('welcome');
@@ -14,3 +15,7 @@ Route::get('/socials', function () {
     return view('socials');
 });
 
+Route::get('/courses', function () {
+    $courses = Course::all();
+    return view('courses', compact('courses'));
+});
