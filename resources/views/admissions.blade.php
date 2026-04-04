@@ -4,9 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UCC Admissions</title>
-    <link href="https://jsdelivr.net" rel="stylesheet">
-    <link rel="stylesheet" href="https://cloudflare.com">
+
     <style>
+        body {
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url("{{ asset('images/UCC.jpg') }}");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            font-family: Arial, sans-serif;
+        }
+
         .main-wrapper {
             width: 100%;
             max-width: 550px;
@@ -18,7 +32,7 @@
             padding-top: 20px;
         }
 
-        .back-link {
+        .back-btn {
             color: #ffffff;
             text-decoration: none;
             font-weight: 700;
@@ -60,6 +74,7 @@
             border: 1px solid rgba(255, 255, 255, 1);
             text-align: center;
             width: 100%;
+            box-sizing: border-box;
         }
 
         .emoji-header {
@@ -83,6 +98,10 @@
             margin-bottom: 0;
         }
 
+        .button-wrap {
+            padding-bottom: 30px;
+        }
+
         .apply-btn {
             background: #FFD700;
             color: #003366;
@@ -98,48 +117,52 @@
             display: block;
             text-align: center;
             margin-top: 10px;
+            box-sizing: border-box;
+        }
+
+        .apply-btn:hover {
+            opacity: 0.95;
         }
     </style>
 </head>
-<body style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('{{ asset('images/UCC.jpg') }}'); background-size: cover; background-position: center; background-attachment: fixed; min-height: 100vh; margin: 0; display: flex; justify-content: center; align-items: flex-start;">
+<body>
 
-<div class="main-wrapper">
-    <div class="nav-header">
-        <a href="{{ url('/') }}" class="back-link">
-            <i class="back-btn"></i>← Back to Home
-        </a>
+    <div class="main-wrapper">
+        <div class="nav-header">
+            <a href="{{ url('/') }}" class="back-btn">
+                ← Back to Home
+            </a>
+        </div>
+
+        <div class="header-section">
+            <h1>ADMISSION</h1>
+            <p class="sub-header">Let your UCC journey begin!</p>
+        </div>
+
+        <div class="info-square">
+            <span class="emoji-header">📖</span>
+            <h4>Standard Entry</h4>
+            <p>Applicants must possess a minimum of five (5) subjects at the GCE or CSEC level, including English Language and Mathematics, at grades A, B, C or 1, 2, 3 respectively.</p>
+        </div>
+
+        <div class="info-square">
+            <span class="emoji-header">✏️</span>
+            <h4>4-Subject Pathway</h4>
+            <p>Candidates with four (4) CXC subjects may apply pending outstanding subjects or may opt to complete UCC replacement courses: Core Mathematics, English for Academic Purposes, and Fundamentals of Accounting.</p>
+        </div>
+
+        <div class="info-square">
+            <span class="emoji-header">💼</span>
+            <h4>Mature Option</h4>
+            <p>Applicants must be at least 25 years old with a minimum of five (5) years of work experience. Academic qualifications, résumé, job letter, and three professional references are required.</p>
+        </div>
+
+        <div class="button-wrap">
+            <a href="https://ucc.edu.jm" target="_blank" class="apply-btn">
+                APPLY NOW ➔
+            </a>
+        </div>
     </div>
 
-    <div class="header-section">
-        <h1>ADMISSION</h1>
-        <p class="sub-header">Let your UCC journey begin!</p>
-    </div>
-
-    <div class="info-square">
-        <span class="emoji-header">📖</span>
-        <h4>Standard Entry</h4>
-        <p>Applicants must possess a minimum of five (5) subjects at the GCE or CSEC level (including mandatory English Language and Mathematics) at grades A, B, C or 1, 2, 3 respectively.</p>
-    </div>
-
-    <div class="info-square">
-        <span class="emoji-header">✏️</span>
-        <h4>4-Subject Pathway</h4>
-        <p>Candidates with four (4) CXCs may apply pending outstanding subjects or may opt to complete UCC replacement courses: Core Mathematics, English for Academic Purposes, and Fundamentals of Accounting.</p>
-    </div>
-
-    <div class="info-square">
-        <span class="emoji-header">💼</span>
-        <h4>Mature Option</h4>
-        <p>Applicants must be at least 25 years old with a minimum of five (5) years of work experience. Academic qualifications, résumé, job letter, and three professional references are required.</p>
-    </div>
-
-    <div class="pb-5">
-        <a href="https://ucc.edu.jm" target="_blank" class="btn apply-btn">
-            APPLY NOW ➔
-        </a>
-    </div>
-</div>
-
-<script src="https://jsdelivr.net"></script>
 </body>
 </html>
