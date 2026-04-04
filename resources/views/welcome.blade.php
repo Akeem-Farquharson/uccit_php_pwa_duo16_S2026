@@ -20,7 +20,7 @@
 
     <a href="/directory" class="menu-item">Faculty/Staff Directory</a>
     <a href="/courses" class="menu-item">Courses</a>
-    <a href="/under-construction" class="menu-item">Admissions</a>
+    <a href="/admissions" class="menu-item">Admissions</a>
     <a href="/socials" class="menu-item">Social Media</a>
 </div>
 
