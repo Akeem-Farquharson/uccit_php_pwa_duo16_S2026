@@ -19,3 +19,8 @@ Route::get('/courses', function () {
     $courses = Course::all();
     return view('courses', compact('courses'));
 });
+
+Route::get('/admissions', function () {
+    return view('admissions');
+});
+
