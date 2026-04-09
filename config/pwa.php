@@ -5,7 +5,7 @@ return [
     /*
     |--------------------------------------------------------------------------
     | Would you like the install button to appear on all pages?
-      Set true/false
+    | Set true/false
     |--------------------------------------------------------------------------
     */
 
@@ -15,21 +15,28 @@ return [
     |--------------------------------------------------------------------------
     | PWA Manifest Configuration
     |--------------------------------------------------------------------------
-    |  php artisan erag:update-manifest
+    | php artisan erag:update-manifest
     */
 
     'manifest' => [
-        'name' => 'Laravel PWA',
-        'short_name' => 'LPT',
-        'background_color' => '#6777ef',
-        'display' => 'fullscreen',
-        'description' => 'A Progressive Web Application setup for Laravel projects.',
-        'theme_color' => '#6777ef',
+        'name' => 'UCC IT App',
+        'short_name' => 'UCC IT',
+        'background_color' => '#ffffff',
+        'display' => 'standalone',
+        'description' => 'UCC IT Department Progressive Web App for courses, admissions, directory, socials, and quick contact access.',
+        'theme_color' => '#003366',
         'icons' => [
             [
-                'src' => 'logo.png',
+                'src' => '/images/icons/icon-192x192.png',
+                'sizes' => '192x192',
+                'type' => 'image/png',
+                'purpose' => 'any maskable',
+            ],
+            [
+                'src' => '/images/icons/icon-512x512.png',
                 'sizes' => '512x512',
                 'type' => 'image/png',
+                'purpose' => 'any maskable',
             ],
         ],
     ],
