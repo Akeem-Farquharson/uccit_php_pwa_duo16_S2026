@@ -1,17 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faculty Directory - UCC IT</title>
-    <style>
+@extends('app')
+
+@section('title', 'Faculty Directory - UCC IT')
+
+@section('extra-css')
+<style>
     body {
-        font-family: sans-serif;
-        background: url("{{ asset('images/UCC.jpg') }}") ;
-        background-size: cover;
-        margin: 0;
-        padding: 20px;
         text-align: center;
+        padding: 20px;
     }
 
     .staff-card {
@@ -38,9 +33,10 @@
 
     h1 { color: white; text-shadow: 2px 2px 5px black; }
 </style>
-</head>
-<body>
-    <a href="/" class="back-btn">← Back to Menu</a>
+@endsection
+
+@section('content')
+    <a href="{{ url('/') }}" class="back-btn">← Back to Menu</a>
     <h1>IT Faculty & Staff</h1>
 
     <div class="staff-card">
@@ -61,7 +57,7 @@
             <h3>Sherida Levy</h3>
             <p>Program Coordinator</p>
             <div class="contact-links">
-                <a href="tel:876-236-1895,4020">📞 Call (Ext. 4020)</a>
+                <a href="tel:8762361895,4020">📞 Call (Ext. 4020)</a>
                 <a href="mailto:itprogcoordinator@ucc.edu.jm">📧 Email</a>
             </div>
         </div>
@@ -73,12 +69,11 @@
             <h3>Craig Wilmot</h3>
             <p>Program Officer</p>
             <div class="contact-links">
-                <a href="tel:876-236-1895,3937">📞 Call (Ext. 3937)</a>
+                <a href="tel:8762361895,3937">📞 Call (Ext. 3937)</a>
                 <a href="mailto:itprogofficer4@ucc.edu.jm">📧 Email</a>
             </div>
         </div>
     </div>
-
 
     <div class="staff-card">
         <div class="staff-photo"><img src="{{ asset('images/Support.jpg') }}" alt="Support"></div>
@@ -86,11 +81,9 @@
             <h3>IS&T Officer</h3>
             <p>IT Systems Administrator</p>
             <div class="contact-links">
-                <a href="mailto:isthelpdesk@ucc.edu.jm">📧 Email</a>
-                <a href="mailto:smssupport@ucc.edu.jm">📧 Email</a>
+                <a href="mailto:isthelpdesk@ucc.edu.jm">📧 Email 1</a>
+                <a href="mailto:smssupport@ucc.edu.jm">📧 Email 2</a>
             </div>
         </div>
     </div>
-
-</body>
-</html>
+@endsection

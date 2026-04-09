@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UCC Admissions</title>
+@extends('app')
 
-    <style>
+@section('title', 'UCC Admissions')
+
+@section('extra-css')
+   <style>
+        /* Fixed: Added 'body' selector back in */
         body {
             background:
                 linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
@@ -124,9 +123,9 @@
             opacity: 0.95;
         }
     </style>
-</head>
-<body>
+@endsection
 
+@section('content')
     <div class="main-wrapper">
         <div class="nav-header">
             <a href="{{ url('/') }}" class="back-btn">
@@ -163,6 +162,4 @@
             </a>
         </div>
     </div>
-
-</body>
-</html>
+@endsection

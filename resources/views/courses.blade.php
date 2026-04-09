@@ -1,17 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Courses - UCC IT</title>
+@extends('app')
+
+@section('title', 'Courses - UCC IT')
+
+@section('extra-css')
     <style>
         body {
-            font-family: sans-serif;
-            background: url("{{ asset('images/UCC.jpg') }}");
-            background-size: cover;
-            margin: 0;
-            padding: 20px;
+            /* Inherited from app.blade.php, but adding text-align for this view */
             text-align: center;
+            padding: 20px;
         }
 
         .back-btn {
@@ -55,9 +51,10 @@
             line-height: 1.5;
         }
     </style>
-</head>
-<body>
-    <a href="/" class="back-btn">← Back to Menu</a>
+@endsection
+
+@section('content')
+    <a href="{{ url('/') }}" class="back-btn">← Back to Menu</a>
     <h1>IT Courses</h1>
 
     @forelse ($courses as $course)
@@ -75,5 +72,4 @@
             <p>The courses will appear here once they are inserted into the database.</p>
         </div>
     @endforelse
-</body>
-</html>
+@endsection
