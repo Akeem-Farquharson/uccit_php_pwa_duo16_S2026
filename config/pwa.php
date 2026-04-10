@@ -23,7 +23,7 @@ return [
         'short_name' => 'UCC IT',
         'background_color' => '#ffffff',
         'display' => 'standalone',
-        'description' => 'UCC IT Department Progressive Web App for courses, admissions, directory, socials, and quick contact access.',
+        'description' => 'UCC IT Department Progressive Web App.',
         'theme_color' => '#003366',
         'icons' => [
             [
