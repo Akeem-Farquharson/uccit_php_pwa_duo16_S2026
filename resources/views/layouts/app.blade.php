@@ -194,7 +194,7 @@
 
         <div class="sidebar-footer">
             <a
-                href="mailto:hodit@ucc.edu.jm?subject=UCC%20IT%20Department%20Inquiry"
+                href="mailto:ithod@ucc.edu.jm?subject=UCC%20IT%20Department%20Inquiry"
                 class="email-fab"
             >
                 <i class="bi bi-envelope-fill email-fab-icon"></i>

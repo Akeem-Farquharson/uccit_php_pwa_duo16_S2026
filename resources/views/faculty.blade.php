@@ -136,13 +136,13 @@
 
             <div class="staff-card">
                 <div class="staff-photo">
-                    <img src="https://via.placeholder.com/150" alt="Dr. Peter Ndajah">
+                    <img src="{{ asset('images/p-ndajah.jpg') }}" alt="Dr. Peter Ndajah">
                 </div>
                 <div class="staff-info">
                     <h3>Dr. Peter Ndajah</h3>
                     <p>Dean</p>
                     <div class="contact-links">
-                        <a href="tel:8769063000">
+                        <a href="tel:8763391279">
                             <i class="bi bi-telephone-fill"></i>
                             <span>Call</span>
                         </a>
@@ -156,17 +156,17 @@
 
             <div class="staff-card">
                 <div class="staff-photo">
-                    <img src="{{ asset('images/Otis.jpg') }}" alt="Otis Osbourne">
+                    <img src="{{ asset('images/o-osbourne.jpg') }}" alt="Otis Osbourne">
                 </div>
                 <div class="staff-info">
-                    <h3>Otis Osbourne</h3>
+                    <h3>Mr. Otis Osbourne</h3>
                     <p>Head of Department</p>
                     <div class="contact-links">
-                        <a href="tel:8769063000">
+                        <a href="tel:876906-3000,4116">
                             <i class="bi bi-telephone-fill"></i>
                             <span>Call</span>
                         </a>
-                        <a href="mailto:oosbourne@ucc.edu.jm">
+                        <a href="mailto:ithod@ucc.edu.jm">
                             <i class="bi bi-envelope-fill"></i>
                             <span>Email</span>
                         </a>
