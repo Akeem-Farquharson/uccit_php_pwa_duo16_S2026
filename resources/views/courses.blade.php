@@ -1,4 +1,4 @@
-@extends('app')
+@extends('layouts.app')
 
 @section('title', 'Courses - UCC IT')
 
@@ -55,7 +55,7 @@
 
 @section('content')
     <a href="{{ url('/') }}" class="back-btn">← Back to Menu</a>
-    <h1>IT Courses</h1>
+    <h1>Courses Offered</h1>
 
     @forelse ($courses as $course)
         <div class="course-card">

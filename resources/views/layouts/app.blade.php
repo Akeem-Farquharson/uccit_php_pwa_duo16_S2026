@@ -173,7 +173,7 @@
 
             <a href="{{ url('/directory') }}" class="nav-item">
                 <i class="bi bi-people-fill nav-icon"></i>
-                <span class="nav-label">Directory</span>
+                <span class="nav-label">Faculty</span>
             </a>
 
             <a href="{{ url('/courses') }}" class="nav-item">

@@ -78,7 +78,7 @@
         <div class="dashboard-grid">
             <a href="{{ url('/directory') }}" class="dashboard-card">
                 <i class="bi bi-people-fill dashboard-icon"></i>
-                <span class="dashboard-label">Faculty/Staff Directory</span>
+                <span class="dashboard-label">Faculty</span>
             </a>
 
             <a href="{{ url('/courses') }}" class="dashboard-card">

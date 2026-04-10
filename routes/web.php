@@ -8,7 +8,7 @@ Route::get('/', function () {
 });
 
 Route::get('/directory', function () {
-    return view('directory');
+    return view('faculty');
 });
 
 Route::get('/socials', function () {
