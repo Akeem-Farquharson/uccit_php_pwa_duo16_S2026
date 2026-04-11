@@ -1,38 +1,50 @@
 "use strict";
 
-const CACHE_NAME = "offline-cache-v1";
-const OFFLINE_URL = '/offline.html';
+/* Cache name for version control */
+const CACHE_NAME = "ucc-it-app-v1";
 
+/* Offline fallback page */
+const OFFLINE_URL = "/offline.html";
+
+/* Core files to cache for offline access */
 const filesToCache = [
-    OFFLINE_URL
+    "/",
+    OFFLINE_URL,
+    "/css/app.css",
+    "/manifest.json",
+    "/images/logo.png",
+    "/images/icons/icon-192x192.png",
+    "/images/icons/icon-512x512.png"
 ];
 
+/* Install event - caches essential files */
 self.addEventListener("install", (event) => {
     event.waitUntil(
-        caches.open(CACHE_NAME)
-            .then((cache) => cache.addAll(filesToCache))
+        caches.open(CACHE_NAME).then((cache) => {
+            return cache.addAll(filesToCache);
+        })
+    );
+    self.skipWaiting(); // Activate immediately
+});
+
+/* Fetch event - serves cached content when offline */
+self.addEventListener("fetch", (event) => {
+    if (event.request.mode === "navigate") {
+        event.respondWith(
+            fetch(event.request).catch(() => caches.match(OFFLINE_URL))
+        );
+        return;
+    }
+
+    event.respondWith(
+        caches.match(event.request).then((response) => {
+            return response || fetch(event.request);
+        })
     );
 });
 
-self.addEventListener("fetch", (event) => {
-    if (event.request.mode === 'navigate') {
-        event.respondWith(
-            fetch(event.request)
-                .catch(() => {
-                    return caches.match(OFFLINE_URL);
-                })
-        );
-    } else {
-        event.respondWith(
-            caches.match(event.request)
-                .then((response) => {
-                    return response || fetch(event.request);
-                })
-        );
-    }
-});
-
-self.addEventListener('activate', (event) => {
+/* Activate event - removes old caches */
+self.addEventListener("activate", (event) => {
     event.waitUntil(
         caches.keys().then((cacheNames) => {
             return Promise.all(
@@ -44,4 +56,5 @@ self.addEventListener('activate', (event) => {
             );
         })
     );
+    self.clients.claim(); // Take control of all pages
 });

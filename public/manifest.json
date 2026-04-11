@@ -1,11 +1,19 @@
 {
     "name": "UCC IT App",
     "short_name": "UCC IT",
-    "background_color": "#ffffff",
-    "display": "standalone",
     "description": "UCC IT Department Progressive Web App.",
-    "theme_color": "#003366",
+
     "start_url": "/",
+    "scope": "/",
+
+    "display": "standalone",
+    "orientation": "portrait",
+
+    "background_color": "#003366",
+    "theme_color": "#003366",
+
+    "categories": ["education", "productivity"],
+
     "icons": [
         {
             "src": "/images/icons/icon-192x192.png",
