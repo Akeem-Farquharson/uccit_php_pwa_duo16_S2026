@@ -24,7 +24,7 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 95px;
+            height: 110px;
             background: #003366;
             color: white;
             display: flex;
@@ -32,6 +32,7 @@
             padding: 0 30px;
             border-bottom: 2px solid #FFD700;
             z-index: 1000;
+            gap: 18px;
         }
 
         .menu-toggle {
@@ -40,7 +41,27 @@
             color: white;
             font-size: 1.8rem;
             cursor: pointer;
-            margin-right: 20px;
+            margin-right: 6px;
+            flex-shrink: 0;
+        }
+
+        .banner-logo-card {
+            height: 90px;
+            width: 360px;
+            max-width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            overflow: hidden;
+            flex-shrink: 1;
+        }
+
+        .banner-logo {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: left center;
+            display: block;
         }
 
         .app-title {
@@ -54,10 +75,10 @@
         /* SIDEBAR */
         .sidebar {
             position: fixed;
-            top: 95px;
+            top: 110px;
             left: 0;
             width: 220px;
-            height: calc(100vh - 95px);
+            height: calc(100vh - 110px);
             background: #ffffff;
             border-right: 1px solid #ddd;
             transition: width 0.3s ease;
@@ -145,7 +166,7 @@
 
         /* MAIN CONTENT */
         .main-content {
-            margin-top: 95px;
+            margin-top: 110px;
             margin-left: 220px;
             padding: 20px;
             transition: margin-left 0.3s ease;
@@ -185,6 +206,28 @@
             font-size: 1rem;
             line-height: 1;
         }
+
+        @media (max-width: 768px) {
+            .top-banner {
+                height: 100px;
+                padding: 0 18px;
+                gap: 12px;
+            }
+
+            .banner-logo-card {
+                width: 250px;
+                height: 64px;
+            }
+
+            .sidebar {
+                top: 100px;
+                height: calc(100vh - 100px);
+            }
+
+            .main-content {
+                margin-top: 100px;
+            }
+        }
     </style>
 
     @yield('extra-css')
@@ -195,7 +238,10 @@
         <button class="menu-toggle" onclick="toggleSidebar()">
             <i class="bi bi-list"></i>
         </button>
-        <div class="app-title">UCC IT Department</div>
+
+        <div class="banner-logo-card">
+            <img src="{{ asset('images/logo.png') }}" alt="UCC IT Department" class="banner-logo">
+        </div>
     </header>
 
     <aside id="sidebar" class="sidebar collapsed">

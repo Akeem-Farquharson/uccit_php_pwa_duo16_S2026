@@ -168,8 +168,8 @@
             @endif
         @empty
             <div class="empty-card">
-                <h3>No courses added yet</h3>
-                <p>The courses will appear here once they are inserted into the database.</p>
+                <h3>No courses to display!</h3>
+                <p>All courses will appear here once they've been added to our database.</p>
             </div>
         @endforelse
     </div>

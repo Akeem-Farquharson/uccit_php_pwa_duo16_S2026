@@ -130,19 +130,19 @@
 
 @section('content')
     <div class="directory-wrapper">
-        <h1 class="directory-title">IT Faculty Directory</h1>
+        <h1 class="directory-title">Faculty & Staff</h1>
 
         <div class="staff-grid">
 
             <div class="staff-card">
                 <div class="staff-photo">
-                    <img src="{{ asset('images/p-ndajah.jpg') }}" alt="Dr. Peter Ndajah">
+                    <img src="{{ asset('images/p_ndajah.jpg') }}" alt="Peter Ndajah">
                 </div>
                 <div class="staff-info">
                     <h3>Dr. Peter Ndajah</h3>
                     <p>Dean</p>
                     <div class="contact-links">
-                        <a href="tel:8763391279">
+                        <a href="tel:8763391279,4037">
                             <i class="bi bi-telephone-fill"></i>
                             <span>Call</span>
                         </a>
@@ -156,13 +156,13 @@
 
             <div class="staff-card">
                 <div class="staff-photo">
-                    <img src="{{ asset('images/o-osbourne.jpg') }}" alt="Otis Osbourne">
+                    <img src="{{ asset('images/o_osbourne.jpg') }}" alt="Otis Osbourne">
                 </div>
                 <div class="staff-info">
                     <h3>Mr. Otis Osbourne</h3>
                     <p>Head of Department</p>
                     <div class="contact-links">
-                        <a href="tel:876906-3000,4116">
+                        <a href="tel:8769063000,4116">
                             <i class="bi bi-telephone-fill"></i>
                             <span>Call</span>
                         </a>
@@ -176,11 +176,11 @@
 
             <div class="staff-card">
                 <div class="staff-photo">
-                    <img src="https://via.placeholder.com/150" alt="Sherida Levy">
+                    <img src="{{ asset('images/no_photo.png') }}" alt="Sherida Levy">
                 </div>
                 <div class="staff-info">
                     <h3>Ms. Sherida Levy</h3>
-                    <p>Program Coordinator</p>
+                    <p>Programme Coordinator</p>
                     <div class="contact-links">
                         <a href="tel:8762361895,4020">
                             <i class="bi bi-telephone-fill"></i>
@@ -196,11 +196,11 @@
 
             <div class="staff-card">
                 <div class="staff-photo">
-                    <img src="{{ asset('images/Craig.jpg') }}" alt="Craig Wilmot">
+                    <img src="{{ asset('images/c_wilmot.jpg') }}" alt="Craig Wilmot">
                 </div>
                 <div class="staff-info">
                     <h3>Mr. Craig Wilmot</h3>
-                    <p>Program Officer</p>
+                    <p>Programme Officer</p>
                     <div class="contact-links">
                         <a href="tel:8762361895,3937">
                             <i class="bi bi-telephone-fill"></i>
@@ -216,17 +216,17 @@
 
             <div class="staff-card">
                 <div class="staff-photo">
-                    <img src="https://via.placeholder.com/150" alt="Dr. Peter Ndajah">
+                    <img src="{{ asset('images/j_johnson.jpg') }}" alt="Jonathan Johnson">
                 </div>
                 <div class="staff-info">
-                    <h3>Dr. Peter Ndajah</h3>
-                    <p>Dean</p>
+                    <h3>Mr. Jonathan Johnson</h3>
+                    <p>Lecturer</p>
                     <div class="contact-links">
                         <a href="tel:8769063000">
                             <i class="bi bi-telephone-fill"></i>
                             <span>Call</span>
                         </a>
-                        <a href="mailto:deanmathscitech@ucc.edu.jm">
+                        <a href="mailto:mstlecturer@ucc.edu.jm">
                             <i class="bi bi-envelope-fill"></i>
                             <span>Email</span>
                         </a>
@@ -236,17 +236,17 @@
 
             <div class="staff-card">
                 <div class="staff-photo">
-                    <img src="{{ asset('images/Otis.jpg') }}" alt="Otis Osbourne">
+                    <img src="{{ asset('images/no_photo.png') }}" alt="Karen Wilson">
                 </div>
                 <div class="staff-info">
-                    <h3>Otis Osbourne</h3>
-                    <p>Head of Department (HOD)</p>
+                    <h3>Ms. Karen Wilson</h3>
+                    <p>Lecturer</p>
                     <div class="contact-links">
-                        <a href="tel:8769063000">
+                        <a href="tel:8762361895,3937">
                             <i class="bi bi-telephone-fill"></i>
                             <span>Call</span>
                         </a>
-                        <a href="mailto:oosbourne@ucc.edu.jm">
+                        <a href="mailto:itlecturer2@ucc.edu.jm">
                             <i class="bi bi-envelope-fill"></i>
                             <span>Email</span>
                         </a>
@@ -256,59 +256,59 @@
 
             <div class="staff-card">
                 <div class="staff-photo">
-                    <img src="https://via.placeholder.com/150" alt="Sherida Levy">
+                    <img src="{{ asset('images/no_photo.png') }}" alt="Neil Williams">
                 </div>
                 <div class="staff-info">
-                    <h3>Sherida Levy</h3>
-                    <p>Program Coordinator</p>
+                    <h3>Mr. Neil Williams</h3>
+                    <p>Lecturer</p>
+                    <div class="contact-links">
+                        <a href="tel:8769063000">
+                            <i class="bi bi-telephone-fill"></i>
+                            <span>Call</span>
+                        </a>
+                        <a href="mailto:itlecturer@ucc.edu.jm">
+                            <i class="bi bi-envelope-fill"></i>
+                            <span>Email</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="staff-card">
+                <div class="staff-photo">
+                    <img src="{{ asset('images/s_rizvi.jpg') }}" alt="Sajjad Rizvi">
+                </div>
+                <div class="staff-info">
+                    <h3>Dr. Sajjad Rizvi</h3>
+                    <p>Visiting Professor</p>
+                    <div class="contact-links">
+                        <a href="tel:8762361895,3937">
+                            <i class="bi bi-telephone-fill"></i>
+                            <span>Call</span>
+                        </a>
+                        <a href="mailto:srizvi@ucc.edu.jm">
+                            <i class="bi bi-envelope-fill"></i>
+                            <span>Email</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="staff-card">
+                <div class="staff-photo">
+                    <img src="{{ asset('images/s_watson.jpg') }}" alt="Sherida Levy">
+                </div>
+                <div class="staff-info">
+                    <h3>Mr. Stefan Watson</h3>
+                    <p>Lecturer</p>
                     <div class="contact-links">
                         <a href="tel:8762361895,4020">
                             <i class="bi bi-telephone-fill"></i>
                             <span>Call</span>
                         </a>
-                        <a href="mailto:itprogcoordinator@ucc.edu.jm">
+                        <a href="mailto:swatson@faculty.ucc.edu.jm">
                             <i class="bi bi-envelope-fill"></i>
                             <span>Email</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="staff-card">
-                <div class="staff-photo">
-                    <img src="{{ asset('images/Craig.jpg') }}" alt="Craig Wilmot">
-                </div>
-                <div class="staff-info">
-                    <h3>Craig Wilmot</h3>
-                    <p>Program Officer</p>
-                    <div class="contact-links">
-                        <a href="tel:8762361895,3937">
-                            <i class="bi bi-telephone-fill"></i>
-                            <span>Call</span>
-                        </a>
-                        <a href="mailto:itprogofficer4@ucc.edu.jm">
-                            <i class="bi bi-envelope-fill"></i>
-                            <span>Email</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="staff-card">
-                <div class="staff-photo">
-                    <img src="{{ asset('images/Support.jpg') }}" alt="IS&T Officer">
-                </div>
-                <div class="staff-info">
-                    <h3>IS&amp;T Officer</h3>
-                    <p>IT Systems Administrator</p>
-                    <div class="contact-links">
-                        <a href="mailto:isthelpdesk@ucc.edu.jm">
-                            <i class="bi bi-envelope-fill"></i>
-                            <span>Email 1</span>
-                        </a>
-                        <a href="mailto:smssupport@ucc.edu.jm">
-                            <i class="bi bi-envelope-fill"></i>
-                            <span>Email 2</span>
                         </a>
                     </div>
                 </div>

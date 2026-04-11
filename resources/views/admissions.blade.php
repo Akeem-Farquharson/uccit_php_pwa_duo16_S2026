@@ -3,162 +3,130 @@
 @section('title', 'UCC Admissions')
 
 @section('extra-css')
-   <style>
-        /* Fixed: Added 'body' selector back in */
-        body {
-            background:
-                linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                url("{{ asset('images/UCC.jpg') }}");
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            min-height: 100vh;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            font-family: Arial, sans-serif;
-        }
+<style>
+    .admissions-wrapper {
+        max-width: 1100px;
+        margin: 30px auto;
+    }
 
-        .main-wrapper {
-            width: 100%;
-            max-width: 550px;
-            padding: 15px;
-        }
+    .admissions-title {
+        font-size: 1.7rem;
+        font-weight: 700;
+        color: #111111;
+        margin-bottom: 30px;
+    }
 
-        .nav-header {
-            text-align: center;
-            padding-top: 20px;
-        }
+    .admissions-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 26px;
+    }
 
-        .back-btn {
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-            display: inline-block;
-        }
+    .admission-card {
+        background: #ffffff;
+        border-radius: 22px;
+        padding: 26px 22px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        border: 1px solid #e9e9e9;
+        text-align: left;
+    }
 
-        .header-section {
-            padding: 20px 0 20px;
-            text-align: center;
-        }
+    .admission-icon {
+        font-size: 4rem;
+        color: #003366;
+        margin-bottom: 12px;
+    }
 
-        .header-section h1 {
-            font-size: 2rem;
-            font-weight: 900;
-            color: #ffffff;
-            letter-spacing: -1px;
-            margin-bottom: 0;
-            text-transform: uppercase;
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
-        }
+    .admission-card h4 {
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: #003366;
+        margin-bottom: 10px;
+    }
 
-        .sub-header {
-            color: #ffffff;
-            font-weight: 600;
-            font-size: 1.1rem;
-            font-style: italic;
-            text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
-        }
+    .admission-card p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        color: #555555;
+        margin: 0;
+    }
 
-        .info-square {
-            background: rgba(255, 255, 255, 0.98);
-            border-radius: 15px;
-            padding: 20px 25px;
-            margin: 0 auto 15px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-            border: 1px solid rgba(255, 255, 255, 1);
-            text-align: center;
-            width: 100%;
-            box-sizing: border-box;
-        }
+    /* APPLY BUTTON */
+    .apply-wrapper {
+        margin-top: 35px;
+    }
 
-        .emoji-header {
-            font-size: 1.8rem;
-            margin-bottom: 5px;
-            display: block;
-        }
+    .apply-btn {
+        display: inline-block;
+        background: #FFD700;
+        color: #003366;
+        border-radius: 14px;
+        padding: 14px 28px;
+        font-weight: 800;
+        text-decoration: none;
+        font-size: 1rem;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
 
-        .info-square h4 {
-            font-size: 1.2rem;
-            font-weight: 800;
-            color: #003366;
-            margin-bottom: 8px;
-            text-transform: uppercase;
-        }
+    .apply-btn i {
+        margin-left: 6px;
+    }
 
-        .info-square p {
-            font-size: 0.95rem;
-            line-height: 1.4;
-            color: #000000;
-            margin-bottom: 0;
+    @media (max-width: 992px) {
+        .admissions-grid {
+            grid-template-columns: repeat(2, 1fr);
         }
+    }
 
-        .button-wrap {
-            padding-bottom: 30px;
+    @media (max-width: 768px) {
+        .admissions-grid {
+            grid-template-columns: 1fr;
         }
-
-        .apply-btn {
-            background: #FFD700;
-            color: #003366;
-            border-radius: 12px;
-            padding: 15px;
-            font-weight: 900;
-            text-transform: uppercase;
-            border: none;
-            width: 100%;
-            font-size: 1.2rem;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-            text-decoration: none;
-            display: block;
-            text-align: center;
-            margin-top: 10px;
-            box-sizing: border-box;
-        }
-
-        .apply-btn:hover {
-            opacity: 0.95;
-        }
-    </style>
+    }
+</style>
 @endsection
 
 @section('content')
-    <div class="main-wrapper">
-        <div class="nav-header">
-            <a href="{{ url('/') }}" class="back-btn">
-                ← Back to Home
-            </a>
+    <div class="admissions-wrapper">
+        <h1 class="admissions-title">Admissions</h1>
+
+        <div class="admissions-grid">
+
+            <div class="admission-card">
+                <i class="bi bi-journal-text admission-icon"></i>
+                <h4>Standard Entry</h4>
+                <p>
+                    The minimum standard for general admission against which all applications are assessed
+                    requires passes in at least five (5) subjects at the GCE or CSEC level, including English
+                    Language and Mathematics, at grades A, B, C or 1, 2, 3 respectively.
+                </p>
+            </div>
+
+            <div class="admission-card">
+                <i class="bi bi-pencil-square admission-icon"></i>
+                <h4>4-Subject Pathway</h4>
+                <p>
+                    Candidates with four (4) CXC subjects may apply pending outstanding subjects or may
+                    complete UCC replacement courses such as Core Mathematics, English for Academic
+                    Purposes, and Fundamentals of Accounting.
+                </p>
+            </div>
+
+            <div class="admission-card">
+                <i class="bi bi-briefcase-fill admission-icon"></i>
+                <h4>Mature Entry</h4>
+                <p>
+                    Applicants must be at least 25 years old with a minimum of five (5) years of work
+                    experience. Academic qualifications, résumé, job letter, and three professional
+                    references are required.
+                </p>
+            </div>
+
         </div>
 
-        <div class="header-section">
-            <h1>ADMISSION</h1>
-            <p class="sub-header">Let your UCC journey begin!</p>
-        </div>
-
-        <div class="info-square">
-            <span class="emoji-header">📖</span>
-            <h4>Standard Entry</h4>
-            <p>Applicants must possess a minimum of five (5) subjects at the GCE or CSEC level, including English Language and Mathematics, at grades A, B, C or 1, 2, 3 respectively.</p>
-        </div>
-
-        <div class="info-square">
-            <span class="emoji-header">✏️</span>
-            <h4>4-Subject Pathway</h4>
-            <p>Candidates with four (4) CXC subjects may apply pending outstanding subjects or may opt to complete UCC replacement courses: Core Mathematics, English for Academic Purposes, and Fundamentals of Accounting.</p>
-        </div>
-
-        <div class="info-square">
-            <span class="emoji-header">💼</span>
-            <h4>Mature Option</h4>
-            <p>Applicants must be at least 25 years old with a minimum of five (5) years of work experience. Academic qualifications, résumé, job letter, and three professional references are required.</p>
-        </div>
-
-        <div class="button-wrap">
-            <a href="https://ucc.edu.jm" target="_blank" class="apply-btn">
-                APPLY NOW ➔
+        <div class="apply-wrapper">
+            <a href="https://ucc.edu.jm/apply/undergraduate" target="_blank" class="apply-btn">
+                Apply Now <i class="bi bi-arrow-right"></i>
             </a>
         </div>
     </div>
