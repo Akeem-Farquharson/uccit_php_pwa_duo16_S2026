@@ -8,7 +8,8 @@ class CourseController extends Controller
 {
     public function index()
     {
-        $courses = Course::all();
+        $courses = Course::orderBy('code')->get();
+
         return view('courses', compact('courses'));
     }
 }
