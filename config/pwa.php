@@ -5,38 +5,31 @@ return [
     /*
     |--------------------------------------------------------------------------
     | Would you like the install button to appear on all pages?
-    | Set true/false
+      Set true/false
     |--------------------------------------------------------------------------
     */
 
-    'install-button' => false,
+    'install-button' => true,
 
     /*
     |--------------------------------------------------------------------------
     | PWA Manifest Configuration
     |--------------------------------------------------------------------------
-    | php artisan erag:update-manifest
+    |  php artisan erag:update-manifest
     */
 
     'manifest' => [
-        'name' => 'UCC IT App',
-        'short_name' => 'UCC IT',
-        'background_color' => '#ffffff',
-        'display' => 'standalone',
-        'description' => 'UCC IT Department Progressive Web App.',
-        'theme_color' => '#003366',
+        'name' => 'UCC IT Department',
+        'short_name' => 'LPT',
+        'background_color' => '#FFD700',
+        'display' => 'fullscreen',
+        'description' => 'A Progressive Web Application setup for the UCC IT Department.',
+        'theme_color' => '#6777ef',
         'icons' => [
             [
-                'src' => '/images/icons/icon-192x192.png',
-                'sizes' => '192x192',
-                'type' => 'image/png',
-                'purpose' => 'any maskable',
-            ],
-            [
-                'src' => '/images/icons/icon-512x512.png',
+                'src' => 'Logo.JPG',
                 'sizes' => '512x512',
-                'type' => 'image/png',
-                'purpose' => 'any maskable',
+                'type' => 'image/JPG',
             ],
         ],
     ],
