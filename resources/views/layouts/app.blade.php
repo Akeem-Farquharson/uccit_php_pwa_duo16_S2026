@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'UCC IT App')</title>
+    @stack('head')
+
 
     {{-- PWA meta tags and manifest configuration --}}
     @PwaHead

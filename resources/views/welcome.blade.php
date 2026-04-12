@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('title', 'UCC IT Web App - Welcome')
+@push('head')
+<link rel="icon" type="image/png" href="{{ asset('images/favicon.jpeg') }}">
+@endpush
 
 @section('content')
     <!-- Home page container -->
