@@ -15,6 +15,13 @@ const filesToCache = [
     "/images/logo.png",
     "/images/icons/icon-192x192.png",
     "/images/icons/icon-512x512.png"
+	"resources/view/directory",
+	"resources/view/courses",
+	"resources/view/admission",
+	"resources/view/socials",
+	"resources/view/welcome",
+	"/js/app.js",
+	
 ];
 
 /* Install event - caches essential files */
