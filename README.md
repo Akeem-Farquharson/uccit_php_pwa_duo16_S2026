@@ -4,7 +4,7 @@
 The UCC IT Web App is a Progressive Web App (PWA) developed for the Department of Information Technology at the University of the Commonwealth Caribbean. The application provides students with quick access to departmental information, resources, and contact options through a clean and mobile-friendly interface.
 
 ## Live Application
-
+https://ucc-it-app-main-6wspsl.free.laravel.cloud/
 
 ## Features
 - Faculty/Staff Directory
