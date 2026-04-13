@@ -6,6 +6,9 @@ The UCC IT Web App is a Progressive Web App (PWA) developed for the Department o
 ## Live Application
 https://ucc-it-app-main-6wspsl.free.laravel.cloud/
 
+## GitHub Repository
+https://github.com/Akeem-Farquharson/uccit_php_pwa_duo16_S2026
+
 ## Features
 - Faculty/Staff Directory
 - Courses Section with database integration
